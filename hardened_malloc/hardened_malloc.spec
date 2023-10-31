@@ -7,7 +7,7 @@ License:        MIT
 URL:            https://github.com/GrapheneOS/hardened_malloc
 Source0:        %{url}/archive/refs/tags/%{version}.tar.gz
 
-BuildRequires:  systemd-rpm-macros rpm-build rpmdevtools rpmlint make gcc
+BuildRequires:  systemd-rpm-macros rpm-build rpmdevtools rpmlint make gcc gcc-c++
 
 
 # https://github.com/GrapheneOS/hardened_malloc/issues/200
