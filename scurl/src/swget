@@ -1,2 +1,0 @@
-#!/bin/bash
-exec wget --secure-protocol=TLSv1_3 --https-enforce=hard "$@"
