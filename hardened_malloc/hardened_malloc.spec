@@ -106,26 +106,26 @@ make CONFIG_NATIVE=false CONFIG_X86_64_V4=true VARIANT=pkey-x86-64-v4;
 # end section from https://github.com/divestedcg/rpm-hardened_malloc/blob/master/hardened_malloc.spec
 
 %install
-install -Dm4644 -s %{_srcdir}/out/libhardened_malloc.so %{buildroot}%{_libdir}/libhardened_malloc.so
-install -Dm4644 -s %{_srcdir}/out-light/libhardened_malloc-light.so %{buildroot}%{_libdir}/libhardened_malloc-light.so
-install -Dm4644 -s %{_srcdir}/out-pkey/libhardened_malloc-pkey.so %{buildroot}%{_libdir}/libhardened_malloc-pkey.so
+install -Dm0644 -s %{_srcdir}/out/libhardened_malloc.so %{buildroot}%{_libdir}/libhardened_malloc.so
+install -Dm0644 -s %{_srcdir}/out-light/libhardened_malloc-light.so %{buildroot}%{_libdir}/libhardened_malloc-light.so
+install -Dm0644 -s %{_srcdir}/out-pkey/libhardened_malloc-pkey.so %{buildroot}%{_libdir}/libhardened_malloc-pkey.so
 
 
 %ifarch x86_64
-install -Dm4644 -s %{_srcdir}/out-default-x86-64/libhardened_malloc-default-x86-64.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64/libhardened_malloc.so
-install -Dm4644 -s %{_srcdir}/out-default-x86-64-v2/libhardened_malloc-default-x86-64-v2.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64-v2/libhardened_malloc.so
-install -Dm4644 -s %{_srcdir}/out-default-x86-64-v3/libhardened_malloc-default-x86-64-v3.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64-v3/libhardened_malloc.so
-install -Dm4644 -s %{_srcdir}/out-default-x86-64-v4/libhardened_malloc-default-x86-64-v4.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64-v4/libhardened_malloc.so
+install -Dm0644 -s %{_srcdir}/out-default-x86-64/libhardened_malloc-default-x86-64.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64/libhardened_malloc.so
+install -Dm0644 -s %{_srcdir}/out-default-x86-64-v2/libhardened_malloc-default-x86-64-v2.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64-v2/libhardened_malloc.so
+install -Dm0644 -s %{_srcdir}/out-default-x86-64-v3/libhardened_malloc-default-x86-64-v3.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64-v3/libhardened_malloc.so
+install -Dm0644 -s %{_srcdir}/out-default-x86-64-v4/libhardened_malloc-default-x86-64-v4.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64-v4/libhardened_malloc.so
 
-install -Dm4644 -s %{_srcdir}/out-light-x86-64/libhardened_malloc-light-x86-64.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64/libhardened_malloc-light.so;
-install -Dm4644 -s %{_srcdir}/out-light-x86-64-v2/libhardened_malloc-light-x86-64-v2.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64-v2/libhardened_malloc-light.so
-install -Dm4644 -s %{_srcdir}/out-light-x86-64-v3/libhardened_malloc-light-x86-64-v3.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64-v3/libhardened_malloc-light.so
-install -Dm4644 -s %{_srcdir}/out-light-x86-64-v4/libhardened_malloc-light-x86-64-v4.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64-v4/libhardened_malloc-light.so
+install -Dm0644 -s %{_srcdir}/out-light-x86-64/libhardened_malloc-light-x86-64.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64/libhardened_malloc-light.so;
+install -Dm0644 -s %{_srcdir}/out-light-x86-64-v2/libhardened_malloc-light-x86-64-v2.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64-v2/libhardened_malloc-light.so
+install -Dm0644 -s %{_srcdir}/out-light-x86-64-v3/libhardened_malloc-light-x86-64-v3.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64-v3/libhardened_malloc-light.so
+install -Dm0644 -s %{_srcdir}/out-light-x86-64-v4/libhardened_malloc-light-x86-64-v4.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64-v4/libhardened_malloc-light.so
 
-install -Dm4644 -s %{_srcdir}/out-pkey-x86-64/libhardened_malloc-pkey-x86-64.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64/libhardened_malloc-pkey.so;
-install -Dm4644 -s %{_srcdir}/out-pkey-x86-64-v2/libhardened_malloc-pkey-x86-64-v2.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64-v2/libhardened_malloc-pkey.so;
-install -Dm4644 -s %{_srcdir}/out-pkey-x86-64-v3/libhardened_malloc-pkey-x86-64-v3.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64-v3/libhardened_malloc-pkey.so;
-install -Dm4644 -s %{_srcdir}/out-pkey-x86-64-v4/libhardened_malloc-pkey-x86-64-v4.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64-v4/libhardened_malloc-pkey.so;
+install -Dm0644 -s %{_srcdir}/out-pkey-x86-64/libhardened_malloc-pkey-x86-64.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64/libhardened_malloc-pkey.so;
+install -Dm0644 -s %{_srcdir}/out-pkey-x86-64-v2/libhardened_malloc-pkey-x86-64-v2.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64-v2/libhardened_malloc-pkey.so;
+install -Dm0644 -s %{_srcdir}/out-pkey-x86-64-v3/libhardened_malloc-pkey-x86-64-v3.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64-v3/libhardened_malloc-pkey.so;
+install -Dm0644 -s %{_srcdir}/out-pkey-x86-64-v4/libhardened_malloc-pkey-x86-64-v4.so %{buildroot}%{_libdir}/glibc-hwcaps/x86-64-v4/libhardened_malloc-pkey.so;
 %endif
 
 %check
